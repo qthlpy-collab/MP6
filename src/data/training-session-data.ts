@@ -48,61 +48,61 @@ export type TrainingSession = {
 };
 
 export const trainingTopics: Array<{ value: TrainingTopic; label: string }> = [
-  { value: "number-speed", label: "数字速听" },
-  { value: "time-speed", label: "时间速听" },
-  { value: "date-speed", label: "日期速听" },
-  { value: "weekday-speed", label: "星期速听" },
-  { value: "money-speed", label: "金额速听" },
-  { value: "shopping-scene", label: "购物场景" },
-  { value: "place-nouns", label: "地点名词速听" },
-  { value: "people-nouns", label: "人物名词速听" },
-  { value: "object-nouns", label: "物品名词速听" },
-  { value: "verb-speed", label: "动词速听" },
+  { value: "number-speed", label: "Number Recognition" },
+  { value: "time-speed", label: "Time Recognition" },
+  { value: "date-speed", label: "Date Recognition" },
+  { value: "weekday-speed", label: "Weekday Recognition" },
+  { value: "money-speed", label: "Money Recognition" },
+  { value: "shopping-scene", label: "Shopping Scenarios" },
+  { value: "place-nouns", label: "Place Nouns" },
+  { value: "people-nouns", label: "People Nouns" },
+  { value: "object-nouns", label: "Object Nouns" },
+  { value: "verb-speed", label: "Verb Recognition" },
 ];
 
 export const trainingDurations: TrainingDuration[] = [5, 10, 15];
 
 export const trainingLevels: Array<{ value: TrainingLevel; label: string }> = [
-  { value: "word", label: "单词" },
-  { value: "chunk", label: "词块" },
-  { value: "sentence", label: "句子" },
+  { value: "word", label: "Word" },
+  { value: "chunk", label: "Chunk" },
+  { value: "sentence", label: "Sentence" },
 ];
 
 const numberSpeedPresets: Record<TrainingDuration, Record<TrainingLevel, TrainingStage[]>> = {
   5: {
     word: [
-      makeStage("single", "单数字训练", "0-10 快速反应", 10, "numbers-single", "single-number", "word"),
-      makeStage("double", "两位数训练", "11-99 基础识别", 5, "numbers-double", "single-number", "word"),
+      makeStage("single", "Single-digit Training", "Quick recognition from 0–10", 10, "numbers-single", "single-number", "word"),
+      makeStage("double", "Two-digit Training", "Basic recognition from 11–99", 5, "numbers-double", "single-number", "word"),
     ],
     chunk: [
-      makeStage("number-string-4", "数字串词块", "4位数字串", 8, "number-string-4", "number-string", "chunk"),
-      makeStage("number-string-6", "数字串词块", "6位数字串", 4, "number-string-6", "number-string", "chunk"),
+      makeStage("number-string-4", "Number String Chunk", "Four-digit number strings", 8, "number-string-4", "number-string", "chunk"),
+      makeStage("number-string-6", "Number String Chunk", "Six-digit number strings", 4, "number-string-6", "number-string", "chunk"),
     ],
-    sentence: [makeStage("number-sentence", "数字句子听辨", "含数字的短句", 6, "numbers-sentence", "phrase", "sentence")],
+    sentence: [makeStage("number-sentence", "Number Sentence Recognition", "Short sentences containing numbers", 6, "numbers-sentence", "phrase", "sentence")],
   },
   10: {
     word: [
-      makeStage("single", "单数字训练", "0-10 快速反应", 15, "numbers-single", "single-number", "word"),
-      makeStage("double", "两位数训练", "11-99 基础识别", 15, "numbers-double", "single-number", "word"),
+      makeStage("single", "Single-digit Training", "Quick recognition from 0–10", 15, "numbers-single", "single-number", "word"),
+      makeStage("double", "Two-digit Training", "Basic recognition from 11–99", 15, "numbers-double", "single-number", "word"),
     ],
     chunk: [
-      makeStage("number-string-4", "数字串词块", "4位数字串", 10, "number-string-4", "number-string", "chunk"),
-      makeStage("number-string-8", "数字串词块", "8位数字串", 8, "number-string-8", "number-string", "chunk"),
+      makeStage("number-string-4", "Number String Chunk", "Four-digit number strings", 10, "number-string-4", "number-string", "chunk"),
+      makeStage("number-string-8", "Number String Chunk", "Eight-digit number strings", 8, "number-string-8", "number-string", "chunk"),
     ],
-    sentence: [makeStage("number-sentence", "数字句子听辨", "含数字的短句", 8, "numbers-sentence", "phrase", "sentence")],
+    sentence: [makeStage("number-sentence", "Number Sentence Recognition", "Short sentences containing numbers", 8, "numbers-sentence", "phrase", "sentence")],
   },
   15: {
     word: [
-      makeStage("single", "单数字训练", "0-10 快速反应", 20, "numbers-single", "single-number", "word"),
-      makeStage("double", "两位数训练", "11-99 基础识别", 20, "numbers-double", "single-number", "word"),
-      makeStage("triple", "三位数训练", "100-999 听辨", 10, "numbers-triple", "single-number", "word"),
+      makeStage("single", "Single-digit Training", "Quick recognition from 0–10", 20, "numbers-single", "single-number", "word"),
+      makeStage("double", "Two-digit Training", "Basic recognition from 11–99", 20, "numbers-double", "single-number", "word"),
+      makeStage("triple", "Three-digit Training", "Recognition from 100–999", 10, "numbers-triple", "single-number", "word"),
     ],
     chunk: [
-      makeStage("number-string-6", "数字串词块", "6位数字串", 12, "number-string-6", "number-string", "chunk"),
-      makeStage("number-string-10", "数字串词块", "10位数字串", 8, "number-string-10", "number-string", "chunk"),
-      makeStage("phone", "电话号码词块", "11位电话号码", 5, "phone-numbers", "number-string", "chunk"),
+      makeStage("number-string-6", "Number String Chunk", "Six-digit number strings", 12, "number-string-6", "number-string", "chunk"),
+      makeStage("number-string-10", "Number String Chunk", "Ten-digit number strings", 8, "number-string-10", "number-string", "chunk"),
+      makeStage("phone", "Phone Number Chunk", "Eleven-digit phone numbers", 5, "phone-numbers", "number-string", "chunk"),
     ],
-    sentence: [makeStage("number-sentence", "数字句子听辨", "含数字的短句", 10, "numbers-sentence", "phrase", "sentence")],
+    sentence: [makeStage("number-sentence", "Number Sentence Recognition", "Short sentences containing numbers", 10, "numbers-sentence", "phrase", "sentence")],
   },
 };
 
@@ -136,15 +136,15 @@ export function generateTrainingSession({
 function getTrainingPlanPresets(): Record<TrainingTopic, Record<TrainingDuration, Record<TrainingLevel, TrainingStage[]>>> {
   return {
     "number-speed": numberSpeedPresets,
-    "time-speed": makeContentTopicPresets("time", "时间听辨", "日语时间表达", "time"),
-    "date-speed": makeContentTopicPresets("date", "日期听辨", "日语日期表达", "dates"),
-    "weekday-speed": makeContentTopicPresets("weekday", "星期听辨", "日语星期表达", "weekdays"),
-    "money-speed": makeContentTopicPresets("money", "金额听辨", "日语金额表达", "money"),
-    "shopping-scene": makeContentTopicPresets("shopping", "购物场景听辨", "购物常用句子", "shopping"),
-    "place-nouns": makeContentTopicPresets("places", "地点名词听辨", "N5 高频地点名词", "places"),
-    "people-nouns": makeContentTopicPresets("people", "人物名词听辨", "N5 高频人物名词", "people"),
-    "object-nouns": makeContentTopicPresets("objects", "物品名词听辨", "N5 高频物品名词", "objects"),
-    "verb-speed": makeContentTopicPresets("verbs", "动词听辨", "N5 高频动词", "verbs"),
+    "time-speed": makeContentTopicPresets("time", "Time Recognition", "Japanese time expressions", "time"),
+    "date-speed": makeContentTopicPresets("date", "Date Recognition", "Japanese date expressions", "dates"),
+    "weekday-speed": makeContentTopicPresets("weekday", "Weekday Recognition", "Japanese weekday expressions", "weekdays"),
+    "money-speed": makeContentTopicPresets("money", "Money Recognition", "Japanese price expressions", "money"),
+    "shopping-scene": makeContentTopicPresets("shopping", "Shopping Scenarios", "Common shopping sentences", "shopping"),
+    "place-nouns": makeContentTopicPresets("places", "Place Nouns", "High-frequency N5 place nouns", "places"),
+    "people-nouns": makeContentTopicPresets("people", "People Nouns", "High-frequency N5 people nouns", "people"),
+    "object-nouns": makeContentTopicPresets("objects", "Object Nouns", "High-frequency N5 object nouns", "objects"),
+    "verb-speed": makeContentTopicPresets("verbs", "Verb Recognition", "High-frequency N5 verbs", "verbs"),
   };
 }
 
@@ -176,19 +176,19 @@ function makeContentTopicPresets(
 ): Record<TrainingDuration, Record<TrainingLevel, TrainingStage[]>> {
   return {
     5: {
-      word: [makeStage(`${idPrefix}-word`, `${title}：单词`, description, 6, category, "phrase", "word")],
-      chunk: [makeStage(`${idPrefix}-chunk`, `${title}：词块`, description, 6, category, "phrase", "chunk")],
-      sentence: [makeStage(`${idPrefix}-sentence`, `${title}：句子`, description, 6, category, "phrase", "sentence")],
+      word: [makeStage(`${idPrefix}-word`, `${title}: Word`, description, 6, category, "phrase", "word")],
+      chunk: [makeStage(`${idPrefix}-chunk`, `${title}: Chunk`, description, 6, category, "phrase", "chunk")],
+      sentence: [makeStage(`${idPrefix}-sentence`, `${title}: Sentence`, description, 6, category, "phrase", "sentence")],
     },
     10: {
-      word: [makeStage(`${idPrefix}-word`, `${title}：单词`, description, 8, category, "phrase", "word")],
-      chunk: [makeStage(`${idPrefix}-chunk`, `${title}：词块`, description, 8, category, "phrase", "chunk")],
-      sentence: [makeStage(`${idPrefix}-sentence`, `${title}：句子`, description, 8, category, "phrase", "sentence")],
+      word: [makeStage(`${idPrefix}-word`, `${title}: Word`, description, 8, category, "phrase", "word")],
+      chunk: [makeStage(`${idPrefix}-chunk`, `${title}: Chunk`, description, 8, category, "phrase", "chunk")],
+      sentence: [makeStage(`${idPrefix}-sentence`, `${title}: Sentence`, description, 8, category, "phrase", "sentence")],
     },
     15: {
-      word: [makeStage(`${idPrefix}-word`, `${title}：单词`, description, 10, category, "phrase", "word")],
-      chunk: [makeStage(`${idPrefix}-chunk`, `${title}：词块`, description, 10, category, "phrase", "chunk")],
-      sentence: [makeStage(`${idPrefix}-sentence`, `${title}：句子`, description, 10, category, "phrase", "sentence")],
+      word: [makeStage(`${idPrefix}-word`, `${title}: Word`, description, 10, category, "phrase", "word")],
+      chunk: [makeStage(`${idPrefix}-chunk`, `${title}: Chunk`, description, 10, category, "phrase", "chunk")],
+      sentence: [makeStage(`${idPrefix}-sentence`, `${title}: Sentence`, description, 10, category, "phrase", "sentence")],
     },
   };
 }

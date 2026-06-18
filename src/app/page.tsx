@@ -14,21 +14,22 @@ export default function HomePage() {
         <div className="relative max-w-3xl">
           <p className="eyebrow text-sand">AI-ASSISTED JAPANESE LEARNING</p>
           <h1 className="mt-5 text-4xl font-black leading-[1.08] tracking-[-0.04em] sm:text-5xl md:text-6xl">
-            从“记住一个词”，<br />
-            到<span className="text-sand">真正说出来。</span>
+            Move from remembering words<br />
+            to <span className="text-sand">using Japanese with confidence.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/65">
-            词汇、语法、假名、汉字、听力、阅读与造句练习，被整理为一条清晰的学习路径。适合 JLPT N5–N4 自学与课堂演示。
+            Vocabulary, grammar, kana, kanji, listening, reading, and sentence practice are organized
+            into one clear learning path for JLPT N5–N4 study.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="light" size="lg">
               <Link href="/practice">
-                进入练习工作台
+                Open Practice Studio
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
             <Button asChild variant="outlineDark" size="lg">
-              <Link href="/lessons">查看课程地图</Link>
+              <Link href="/lessons">View Lesson Map</Link>
             </Button>
           </div>
         </div>
@@ -36,10 +37,10 @@ export default function HomePage() {
 
       <section className="mb-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          { icon: BrainCircuit, value: words.length, label: "记忆词汇", note: "图像与编码联想" },
-          { icon: Languages, value: "N5", label: "语法体系", note: "例句、误区与测验" },
-          { icon: Headphones, value: "4", label: "核心技能", note: "听说读写循环训练" },
-          { icon: Sparkles, value: "AI", label: "句子讲解", note: "多语言教学反馈" },
+          { icon: BrainCircuit, value: words.length, label: "Memory Vocabulary", note: "Visual and code-based recall" },
+          { icon: Languages, value: "N5", label: "Grammar System", note: "Examples, pitfalls, and quizzes" },
+          { icon: Headphones, value: "4", label: "Core Skills", note: "Listening, speaking, reading, and writing" },
+          { icon: Sparkles, value: "AI", label: "Sentence Coach", note: "Structured teaching feedback" },
         ].map((item) => (
           <div key={item.label} className="rounded-2xl border border-ink/10 bg-white/70 p-5">
             <item.icon className="h-5 w-5 text-vermilion" />
@@ -53,10 +54,11 @@ export default function HomePage() {
       <section className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
           <p className="eyebrow">VOCABULARY LIBRARY</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl">从今天要记住的词开始。</h2>
+          <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl">Start with the words you want to remember today.</h2>
         </div>
         <p className="max-w-md text-sm leading-6 text-muted-foreground">
-          搜索日语、罗马字、中文或英文，并用图像、故事和假名编码建立长期记忆。
+          Search by Japanese, romaji, Chinese, or English, then build long-term recall with images,
+          stories, and kana codes.
         </p>
       </section>
       <WordLibrary words={words} />

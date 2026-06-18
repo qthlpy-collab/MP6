@@ -6,7 +6,7 @@ import { availableLanguages, type LanguageCode } from "@/data/languages";
 
 const STORAGE_KEY = "explanation-languages";
 const CHANGE_EVENT = "explanation-languages-change";
-const DEFAULT_LANGUAGES: LanguageCode[] = ["zh"];
+const DEFAULT_LANGUAGES: LanguageCode[] = ["en"];
 
 function readStoredLanguages(): LanguageCode[] {
   if (typeof window === "undefined") return DEFAULT_LANGUAGES;

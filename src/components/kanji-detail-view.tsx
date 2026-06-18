@@ -44,7 +44,6 @@ export function KanjiDetailView({
           <div>
             <h1 className="text-gradient text-7xl font-bold">{kanji.kanji}</h1>
             <p className="mt-4 text-xl font-semibold text-primary">{kanji.meaning}</p>
-            <p className="mt-1 text-muted-foreground">{kanji.chineseMeaning}</p>
           </div>
           <div className="flex flex-wrap gap-2">
             {relatedLessons.map((lesson) => (
@@ -68,10 +67,9 @@ export function KanjiDetailView({
             <InfoRow label={t("onyomi")} value={kanji.onyomi.join(" / ") || "Coming soon"} />
             <InfoRow label={t("kunyomi")} value={kanji.kunyomi.join(" / ") || "Coming soon"} />
             <InfoRow label={t("english")} value={kanji.meaning} />
-            <InfoRow label={t("chinese")} value={kanji.chineseMeaning} />
             <KanjiStrokeOrder
               character={kanji.kanji}
-              missingText="筆順データが見つかりません"
+              missingText="Stroke order data is unavailable."
             />
           </CardContent>
         </Card>
@@ -88,7 +86,7 @@ export function KanjiDetailView({
                   <div key={vocabulary.id} className="rounded-md border border-blue-100 bg-blue-50/60 p-3">
                     <p className="font-semibold">{vocabulary.word}</p>
                     <p className="text-sm text-muted-foreground">
-                      {vocabulary.reading} / {vocabulary.meaning} / {vocabulary.chineseMeaning}
+                      {vocabulary.reading} / {vocabulary.meaning}
                     </p>
                   </div>
                 ))}
@@ -221,7 +219,7 @@ function KanjiEntryGrid({ entries }: { entries: AdvancedKanjiEntry[] }) {
             <div>
               <p className="text-sm font-semibold">{entry.reading}</p>
               <p className="text-sm text-muted-foreground">
-                {entry.meaning} / {entry.chineseMeaning}
+                {entry.meaning}
               </p>
             </div>
           </div>
@@ -238,7 +236,7 @@ function WordEntryList({ entries }: { entries: AdvancedWordEntry[] }) {
         <div key={`${entry.word}-${entry.reading}`} className="rounded-md border border-white/80 bg-white/85 p-3">
           <p className="font-semibold">{entry.word}</p>
           <p className="text-sm text-muted-foreground">
-            {entry.reading} / {entry.meaning} / {entry.chineseMeaning}
+            {entry.reading} / {entry.meaning}
           </p>
         </div>
       ))}

@@ -89,12 +89,10 @@ function BasicInfoTab({ word }: { word: LearningWord }) {
           <InfoItem label="Kanji" value={word.kanji} large />
           <InfoItem label="Kana" value={word.kana} large />
           <InfoItem label="English" value={word.meaningEn} />
-          <InfoItem label="Chinese" value={word.meaningCn} />
           <InfoItem label="Code Path" value={word.codeSplit.map((item) => item.codeWord).join(" + ")} />
           {word.example && <div className="sm:col-span-2 rounded-lg bg-muted p-4">
             <p className="text-sm text-muted-foreground">Example sentence</p>
             <p className="mt-2 text-xl font-semibold">{word.example}</p>
-            <p className="mt-1 text-sm text-muted-foreground">{word.exampleZh}</p>
           </div>}
           <div className="sm:col-span-2 space-y-3">
             <div>
@@ -123,7 +121,6 @@ function BasicInfoTab({ word }: { word: LearningWord }) {
                   </Button>
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground">English: {example.english}</p>
-                <p className="mt-1 text-sm text-muted-foreground">Chinese: {example.chinese}</p>
                 {word.hasImage && <audio
                   controls
                   preload="metadata"

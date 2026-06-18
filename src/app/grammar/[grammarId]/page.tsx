@@ -9,6 +9,7 @@ import { PageShell } from "@/components/page-shell";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getGrammarPoint, grammarPoints } from "@/data/grammar";
+import { grammarEnglishContent } from "@/data/grammar-english";
 
 export function generateStaticParams() {
   return grammarPoints.map((point) => ({ grammarId: point.id }));
@@ -23,6 +24,12 @@ export default async function GrammarDetailPage({
   const point = getGrammarPoint(grammarId);
 
   if (!point) notFound();
+  const englishContent = grammarEnglishContent[point.id];
+  const englishQuiz = {
+    ...point.quiz,
+    question: englishContent?.quizQuestion ?? point.quiz.question,
+    explanation: englishContent?.quizExplanation ?? point.quiz.explanation,
+  };
 
   return (
     <PageShell>
@@ -51,7 +58,7 @@ export default async function GrammarDetailPage({
         </Card>
         <Card>
           <CardHeader><CardTitle>Usage</CardTitle></CardHeader>
-          <CardContent><p className="leading-7 text-muted-foreground">{point.usage}</p></CardContent>
+          <CardContent><p className="leading-7 text-muted-foreground">{englishContent?.usage ?? point.usage}</p></CardContent>
         </Card>
         <Card>
           <CardHeader><CardTitle>Examples</CardTitle></CardHeader>
@@ -60,7 +67,7 @@ export default async function GrammarDetailPage({
         <Card>
           <CardHeader><CardTitle>Common Mistakes</CardTitle></CardHeader>
           <CardContent className="space-y-2">
-            {point.commonMistakes.map((mistake) => (
+            {(englishContent?.commonMistakes ?? point.commonMistakes).map((mistake) => (
               <p key={mistake} className="rounded-lg border border-pink-100 bg-pink-50/60 p-3 text-sm">
                 {mistake}
               </p>
@@ -71,7 +78,7 @@ export default async function GrammarDetailPage({
 
       <Card className="mt-5">
         <CardHeader><CardTitle>Practice</CardTitle></CardHeader>
-        <CardContent><GrammarQuiz quiz={point.quiz} /></CardContent>
+        <CardContent><GrammarQuiz quiz={englishQuiz} /></CardContent>
       </Card>
     </PageShell>
   );

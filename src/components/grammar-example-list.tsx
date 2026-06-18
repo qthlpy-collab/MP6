@@ -61,10 +61,9 @@ export function GrammarExampleList({
               aria-label={`Play pronunciation for ${example.japanese}`}
             >
               <Volume2 className="h-4 w-4" />
-              播放
+              Play
             </Button>
           </div>
-          <p className="mt-2 text-sm text-muted-foreground">{example.chinese}</p>
           <audio
             id={audioId(grammarId, index)}
             controls

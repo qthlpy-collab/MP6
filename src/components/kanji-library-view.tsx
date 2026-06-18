@@ -44,7 +44,6 @@ export function KanjiLibraryView({ items }: { items: KanjiLibraryItem[] }) {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">{kanji.meaning}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{kanji.chineseMeaning}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {relatedVocabulary.map((vocabulary) => (
                   <span

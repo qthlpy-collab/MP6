@@ -88,7 +88,7 @@ export function LessonDetailView({
                     <p className="text-2xl font-bold">{item.word}</p>
                     <p className="text-sm font-semibold text-primary">{item.reading}</p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      {item.meaning} / {item.chineseMeaning}
+                      {item.meaning}
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -118,7 +118,6 @@ export function LessonDetailView({
                 <div className="flex items-center justify-between gap-3">
                   <div>
                     <p className="text-4xl font-bold text-primary">{item.kanji}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.chineseMeaning}</p>
                   </div>
                   <ArrowRight className="h-4 w-4 text-muted-foreground" />
                 </div>

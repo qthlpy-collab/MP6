@@ -44,7 +44,7 @@ export function WordCard({ word }: { word: LearningWord }) {
       </CardHeader>
       <CardContent>
         <p className="text-sm text-muted-foreground">{word.meaningEn}</p>
-        <p className="mt-1 text-xs text-muted-foreground">{word.meaningCn} · Lesson {word.lesson}</p>
+        <p className="mt-1 text-xs text-muted-foreground">Lesson {word.lesson}</p>
         <p className="mt-1 text-sm font-medium">{word.kanaSplit.join(" + ")}</p>
         {word.memoryTitle && <div className="mt-4 flex flex-wrap gap-2">
           {word.codeSplit.map((item) => (

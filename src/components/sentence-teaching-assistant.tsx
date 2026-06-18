@@ -25,8 +25,8 @@ const languageOptions: Array<{
   label: string;
   shortLabel: string;
 }> = [
-  { code: "ja", label: "日本語", shortLabel: "JA" },
-  { code: "zh", label: "中文", shortLabel: "ZH" },
+  { code: "ja", label: "Japanese", shortLabel: "JA" },
+  { code: "zh", label: "Chinese", shortLabel: "ZH" },
   { code: "en", label: "English", shortLabel: "EN" },
 ];
 
@@ -37,8 +37,6 @@ export function SentenceTeachingAssistant() {
   const [text, setText] = useState("");
   const [sentences, setSentences] = useState<string[]>([]);
   const [selectedLanguages, setSelectedLanguages] = useState<ExplanationLanguage[]>([
-    "ja",
-    "zh",
     "en",
   ]);
   const [selectedSentence, setSelectedSentence] = useState("");
@@ -141,7 +139,7 @@ export function SentenceTeachingAssistant() {
             <textarea
               value={text}
               onChange={(event) => setText(event.target.value)}
-              placeholder="ここに日本語の文章を貼り付けてください。"
+              placeholder="Paste Japanese text here."
               className="min-h-64 w-full resize-y rounded-lg border border-blue-100 bg-white p-4 text-lg leading-8 outline-none transition placeholder:text-slate-300 focus:border-primary focus:ring-2 focus:ring-primary/15"
               maxLength={12000}
             />
@@ -265,7 +263,7 @@ export function SentenceTeachingAssistant() {
               onClick={() => void analyzeSentence(selectedSentence)}
             >
               <Sparkles className="h-4 w-4" />
-              重新分析
+              Analyze Again
             </Button>
           )}
         </div>

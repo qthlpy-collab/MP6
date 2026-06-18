@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { BookOpenText, Dumbbell, FileText, Grid3X3, Headphones, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { UiLanguageSwitcher } from "@/components/ui-language-switcher";
 import { useUiLanguage } from "@/components/ui-language-provider";
 
 export function AppHeader() {
@@ -66,7 +65,6 @@ export function AppHeader() {
               </Link>
             </Button>
           </nav>
-          <UiLanguageSwitcher />
         </div>
       </div>
     </header>

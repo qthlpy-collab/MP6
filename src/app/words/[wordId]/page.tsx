@@ -35,7 +35,7 @@ export default async function WordDetailPage({ params }: { params: Promise<{ wor
               </Badge>
             </div>
             <p className="mt-3 text-2xl font-semibold text-primary">{word.kana}</p>
-            <p className="mt-2 text-muted-foreground">{word.meaningEn} · {word.meaningCn} · {word.romaji}</p>
+            <p className="mt-2 text-muted-foreground">{word.meaningEn} · {word.romaji}</p>
           </div>
           <div className="rounded-lg border border-pink-100 bg-gradient-to-r from-blue-50 to-pink-50 p-4 text-sm font-semibold text-blue-950">
             {word.kanaSplit.join(" + ")} → {word.codeSplit.map((item) => item.codeWord).join(" + ")}

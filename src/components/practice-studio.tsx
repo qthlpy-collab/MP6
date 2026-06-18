@@ -29,7 +29,7 @@ const LOG_KEY = "nihongo-studio-practice-logs";
 
 function sentenceFeedback(word: PracticeVocabulary, sentence: string) {
   const text = sentence.trim();
-  if (!text) return { score: 0, feedback: "请先写一个包含目标词的日语句子。" };
+  if (!text) return { score: 0, feedback: "Write a Japanese sentence using the target word first." };
 
   const stems: Record<string, string[]> = {
     食べる: ["食べ"],
@@ -39,21 +39,21 @@ function sentenceFeedback(word: PracticeVocabulary, sentence: string) {
   };
   const candidates = [word.word, word.reading, ...(stems[word.word] ?? [])];
   if (!candidates.some((candidate) => text.includes(candidate))) {
-    return { score: 45, feedback: `句子里还没有清楚使用「${word.word}」。请用它或正确的活用形式再试一次。` };
+    return { score: 45, feedback: `The sentence does not clearly use 「${word.word}」. Try again with the word or a correct conjugated form.` };
   }
   if (word.word === "食べる" && text.includes("が食べ")) {
-    return { score: 65, feedback: "已经用到目标词，不过食物作为宾语时通常使用「を」。例如：私はパンを食べます。" };
+    return { score: 65, feedback: "You used the target word, but food as the object normally takes 「を」. Example: 私はパンを食べます。" };
   }
   if (word.word === "飲む" && text.includes("パンを飲")) {
-    return { score: 60, feedback: "语法可以理解，但搭配不自然。「飲む」通常与水、茶、咖啡等饮料搭配。" };
+    return { score: 60, feedback: "The grammar is understandable, but the word combination is unnatural. 「飲む」 is normally used with drinks such as water, tea, or coffee." };
   }
   if (word.word === "行く" && !(text.includes("へ行") || text.includes("に行"))) {
-    return { score: 68, feedback: "使用了「行く」，但目的地通常用「へ」或「に」标记。" };
+    return { score: 68, feedback: "You used 「行く」, but a destination is normally marked with 「へ」 or 「に」." };
   }
   if (word.word === "必要" && text.includes("を必要です")) {
-    return { score: 62, feedback: "「必要です」前通常使用「が」。例如：練習が必要です。" };
+    return { score: 62, feedback: "Use 「が」 before 「必要です」. Example: 練習が必要です。" };
   }
-  return { score: 88, feedback: `很好，目标词使用自然。参考：${word.exampleJp} ${word.collocationHint}` };
+  return { score: 88, feedback: `Good work. The target word is used naturally. Reference: ${word.exampleJp} ${word.collocationHint}` };
 }
 
 export function PracticeStudio() {
@@ -129,7 +129,7 @@ export function PracticeStudio() {
       word: word.word,
       type: "quiz",
       score: correct ? 100 : 0,
-      feedback: correct ? "回答正确" : `正确答案：${word.meaningEn}`,
+      feedback: correct ? "Correct answer." : `Correct answer: ${word.meaningEn}`,
     });
   };
 
@@ -153,7 +153,7 @@ export function PracticeStudio() {
         word: word.word,
         type: "pronunciation",
         score,
-        feedback: score >= 90 ? "发音清楚，节奏自然。" : "整体可理解，可以再注意长音和拍数。",
+        feedback: score >= 90 ? "Clear pronunciation with natural rhythm." : "Understandable overall. Pay closer attention to long vowels and mora timing.",
       });
     };
     recorder.start();
@@ -188,16 +188,16 @@ export function PracticeStudio() {
               </div>
               <p className="mt-7 text-6xl font-black tracking-tight md:text-8xl">{word.word}</p>
               <p className="mt-3 text-2xl font-semibold text-sand">{word.reading}</p>
-              <p className="mt-5 text-base text-white/65">{word.meaningCn} · {word.meaningEn}</p>
+              <p className="mt-5 text-base text-white/65">{word.meaningEn}</p>
             </div>
             <div className="flex flex-row gap-3 md:flex-col md:justify-between">
               <Button type="button" variant="light" onClick={speak}>
                 <Volume2 className="h-4 w-4" />
-                听发音
+                Listen
               </Button>
               <Button type="button" variant="outlineDark" onClick={nextWord}>
                 <RefreshCw className="h-4 w-4" />
-                换一个
+                Next Word
               </Button>
             </div>
           </CardContent>
@@ -207,7 +207,7 @@ export function PracticeStudio() {
           <Card>
             <CardHeader>
               <p className="eyebrow">01 · QUICK CHECK</p>
-              <CardTitle>选择正确含义</CardTitle>
+              <CardTitle>Choose the correct meaning</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {quizOptions.map((option) => (
@@ -226,12 +226,12 @@ export function PracticeStudio() {
                 </button>
               ))}
               <Button type="button" className="mt-2 w-full" disabled={!selectedAnswer} onClick={submitQuiz}>
-                检查答案
+                Check Answer
                 <ArrowRight className="h-4 w-4" />
               </Button>
               {selectedAnswer && (
                 <p className={`rounded-xl p-3 text-sm ${selectedAnswer === word.meaningEn ? "bg-emerald-50 text-emerald-800" : "bg-red-50 text-red-800"}`}>
-                  {selectedAnswer === word.meaningEn ? "正确！" : `再想一下，正确答案是 ${word.meaningEn}。`}
+                  {selectedAnswer === word.meaningEn ? "Correct!" : `Not quite. The correct answer is ${word.meaningEn}.`}
                 </p>
               )}
             </CardContent>
@@ -240,19 +240,19 @@ export function PracticeStudio() {
           <Card>
             <CardHeader>
               <p className="eyebrow">02 · SENTENCE LAB</p>
-              <CardTitle>用目标词造句</CardTitle>
+              <CardTitle>Write a sentence with the target word</CardTitle>
             </CardHeader>
             <CardContent>
               <textarea
                 value={sentence}
                 onChange={(event) => setSentence(event.target.value)}
-                placeholder={`例：${word.exampleJp}`}
+                placeholder={`Example: ${word.exampleJp}`}
                 className="min-h-32 w-full resize-y rounded-xl border border-ink/10 bg-paper px-4 py-3 text-base leading-7 outline-none transition focus:border-vermilion focus:ring-2 focus:ring-vermilion/10"
               />
               <p className="mt-2 text-xs text-muted-foreground">{word.collocationHint}</p>
               <Button type="button" className="mt-4 w-full" onClick={submitSentence}>
                 <Sparkles className="h-4 w-4" />
-                生成反馈
+                Generate Feedback
               </Button>
               {sentenceResult && (
                 <div className="mt-4 rounded-xl border border-ink/10 bg-sand/45 p-4">
@@ -267,7 +267,7 @@ export function PracticeStudio() {
         <Card>
           <CardHeader>
             <p className="eyebrow">03 · SHADOWING</p>
-            <CardTitle>录音与跟读</CardTitle>
+            <CardTitle>Record and shadow</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
             <div className="rounded-xl bg-paper p-4">
@@ -279,17 +279,17 @@ export function PracticeStudio() {
               {!recording ? (
                 <Button type="button" onClick={startRecording}>
                   <Mic className="h-4 w-4" />
-                  开始录音
+                  Start Recording
                 </Button>
               ) : (
                 <Button type="button" onClick={stopRecording}>
                   <Square className="h-4 w-4" />
-                  停止
+                  Stop
                 </Button>
               )}
               <Button type="button" variant="outline" onClick={speak}>
                 <Headphones className="h-4 w-4" />
-                范读
+                Model Audio
               </Button>
             </div>
           </CardContent>
@@ -299,26 +299,27 @@ export function PracticeStudio() {
       <aside className="space-y-6">
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">练习范围</CardTitle>
+            <CardTitle className="text-lg">Practice filters</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <label className="block text-sm font-semibold">
-              JLPT 级别
+              JLPT Level
               <select value={level} onChange={(event) => setLevel(event.target.value as typeof level)} className="form-select">
-                <option value="ALL">全部</option>
+                <option value="ALL">All</option>
                 <option value="N5">N5</option>
                 <option value="N4">N4</option>
               </select>
             </label>
             <label className="block text-sm font-semibold">
-              主题
+              Topic
               <select value={topic} onChange={(event) => setTopic(event.target.value)} className="form-select">
-                <option value="ALL">全部</option>
+                <option value="ALL">All</option>
                 {topics.map((item) => <option key={item}>{item}</option>)}
               </select>
             </label>
             <p className="rounded-xl bg-paper p-3 text-xs leading-5 text-muted-foreground">
-              当前可练习 {filteredWords.length} 个词。练习记录只保存在本机浏览器，不会上传个人数据。
+              {filteredWords.length} words are available with these filters. Practice history stays
+              in this browser and is not uploaded.
             </p>
           </CardContent>
         </Card>
@@ -328,9 +329,9 @@ export function PracticeStudio() {
             <div className="flex items-center justify-between">
               <CardTitle className="flex items-center gap-2 text-lg">
                 <History className="h-4 w-4 text-vermilion" />
-                最近练习
+                Recent Practice
               </CardTitle>
-              <span className="text-xs text-muted-foreground">{logs.length} 条</span>
+              <span className="text-xs text-muted-foreground">{logs.length} entries</span>
             </div>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -345,7 +346,7 @@ export function PracticeStudio() {
               </div>
             )) : (
               <p className="rounded-xl bg-paper p-4 text-sm leading-6 text-muted-foreground">
-                完成一次答题、造句或录音后，学习轨迹会显示在这里。
+                Complete a quiz, sentence, or recording activity to build your learning history.
               </p>
             )}
           </CardContent>
