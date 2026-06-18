@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 42% 97%;
+  --foreground: 168 18% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 168 18% 11%;
+  --primary: 7 61% 49%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 35 43% 84%;
+  --secondary-foreground: 168 18% 11%;
+  --muted: 38 24% 92%;
+  --muted-foreground: 165 7% 42%;
+  --accent: 34 53% 89%;
+  --accent-foreground: 7 61% 35%;
+  --border: 36 18% 84%;
+  --input: 36 18% 84%;
+  --ring: 7 61% 49%;
+  --radius: 1rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(234, 219, 196, 0.72), transparent 28rem),
+    radial-gradient(circle at 96% 10%, rgba(201, 66, 47, 0.08), transparent 24rem),
+    linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(246, 241, 231, 0.88)),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+}
+
+.jp-pattern {
+  background-image:
+    linear-gradient(rgba(23, 33, 31, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 33, 31, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+::selection {
+  background: rgba(244, 114, 182, 0.25);
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #c9422f, #a93324);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #17211f, #c9422f);
+  background-clip: text;
+  color: transparent;
+}
+
+.display-title {
+  max-width: 58rem;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 1.06;
+}
+
+.eyebrow {
+  color: #c9422f;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.form-select {
+  margin-top: 0.5rem;
+  width: 100%;
+  border: 1px solid rgba(23, 33, 31, 0.13);
+  border-radius: 0.75rem;
+  background: white;
+  padding: 0.7rem 0.85rem;
+  color: #17211f;
+  outline: none;
+}
+
+.form-select:focus {
+  border-color: #c9422f;
+  box-shadow: 0 0 0 3px rgba(201, 66, 47, 0.1);
+}
+
+.kanji-stroke-svg svg {
+  height: 100%;
+  width: 100%;
+}
+
+.kanji-stroke-svg path {
+  fill: none !important;
+  stroke: hsl(var(--foreground)) !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.2 !important;
+}
+
+.kanji-stroke-svg text {
+  fill: hsl(var(--primary)) !important;
+  font-weight: 700;
+}
+
+.kanji-stroke-animate path {
+  animation: kanji-draw 0.72s ease forwards;
+  animation-delay: var(--path-delay, 0s);
+  stroke-dasharray: var(--path-length, 160);
+  stroke-dashoffset: var(--path-length, 160);
+}
+
+@keyframes kanji-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

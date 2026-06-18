@@ -1,0 +1,552 @@
+[
+  {
+    "id": "desu",
+    "level": "N5",
+    "lesson": 1,
+    "kanaOrder": "です",
+    "title": "です",
+    "pattern": "Noun / な-adjective + です",
+    "examples": [
+      {
+        "japanese": "わたしは学生です。",
+        "reading": "わたしは がくせいです。",
+        "chinese": "我是学生。"
+      },
+      {
+        "japanese": "この町は静かです。",
+        "reading": "このまちは しずかです。",
+        "chinese": "这个城市很安静。"
+      }
+    ],
+    "commonMistakes": [
+      "不要把 です 当作所有句子的必需结尾；普通体中可以使用 だ 或省略。",
+      "い形容词后直接接 です，不要说「暑いだです」。"
+    ],
+    "usage": "自我介绍、说明事物、课堂回答以及多数正式或礼貌场合。",
+    "quiz": {
+      "question": "「わたしは学生___。」请选择正确形式。",
+      "options": [
+        "です",
+        "ます",
+        "でしたか",
+        "ません"
+      ],
+      "answer": "です",
+      "explanation": "名词句的礼貌肯定形式使用「名词 + です」。"
+    },
+    "explanation": {
+      "ja": "名詞やな形容詞の後ろに付けて、身分や性質を丁寧に説明・判断する表現です。",
+      "zh": "用于礼貌地判断或说明身份、性质，相当于中文的“是……”或礼貌陈述。",
+      "en": "A polite copula used after nouns and na-adjectives to identify or describe someone or something."
+    }
+  },
+  {
+    "id": "dewa-arimasen",
+    "level": "N5",
+    "lesson": 1,
+    "kanaOrder": "ではありません",
+    "title": "ではありません",
+    "pattern": "Noun / な-adjective + ではありません",
+    "examples": [
+      {
+        "japanese": "田中さんは先生ではありません。",
+        "reading": "たなかさんは せんせいではありません。",
+        "chinese": "田中先生不是老师。"
+      }
+    ],
+    "commonMistakes": [
+      "正式书面表达优先使用「ではありません」，「じゃありません」更口语。",
+      "不要与动词否定「ません」混用。"
+    ],
+    "usage": "礼貌地否定身份、类别或な形容词所表达的状态。",
+    "quiz": {
+      "question": "「これは本___。」请选择“这不是书”。",
+      "options": [
+        "ではありません",
+        "ません",
+        "くないです",
+        "ない"
+      ],
+      "answer": "ではありません",
+      "explanation": "名词「本」的礼貌否定使用「ではありません」。"
+    },
+    "explanation": {
+      "ja": "「です」の丁寧な否定形で、「～ではない」という意味を表します。会話では「じゃありません」もよく使います。",
+      "zh": "「です」的礼貌否定形式，表示“不是……”或“不……”。口语中常说「じゃありません」。",
+      "en": "The polite negative form of です, used to say that someone or something is not a certain noun or state."
+    }
+  },
+  {
+    "id": "ka",
+    "level": "N5",
+    "lesson": 2,
+    "kanaOrder": "か",
+    "title": "か",
+    "pattern": "Sentence + か",
+    "examples": [
+      {
+        "japanese": "これはあなたの傘ですか。",
+        "reading": "これは あなたの かさですか。",
+        "chinese": "这是你的伞吗？"
+      }
+    ],
+    "commonMistakes": [
+      "日语疑问句通常保持原语序，不照搬中文或英文倒装。",
+      "正式书写中即使有「か」，也可以使用日文问号，但教材句型常以句号结束。"
+    ],
+    "usage": "询问信息、确认事实、礼貌提问。",
+    "quiz": {
+      "question": "「学生です___。」要变成疑问句，应填什么？",
+      "options": [
+        "か",
+        "を",
+        "で",
+        "に"
+      ],
+      "answer": "か",
+      "explanation": "句末助词「か」表示疑问。"
+    },
+    "explanation": {
+      "ja": "文末に付けて疑問文を作ります。丁寧体では、普通は語順を変える必要がありません。",
+      "zh": "放在句末构成疑问句。礼貌体中通常不需要改变语序。",
+      "en": "A sentence-final particle that turns a statement into a question without changing the usual word order."
+    }
+  },
+  {
+    "id": "no",
+    "level": "N5",
+    "lesson": 2,
+    "kanaOrder": "の",
+    "title": "の",
+    "pattern": "Noun A + の + Noun B",
+    "examples": [
+      {
+        "japanese": "これは日本語の本です。",
+        "reading": "これは にほんごの ほんです。",
+        "chinese": "这是一本日语书。"
+      }
+    ],
+    "commonMistakes": [
+      "两个名词之间通常只需要一个「の」。",
+      "不要把所有中文“的”都机械翻译成「の」。"
+    ],
+    "usage": "表达所有关系、产地、内容、类别、时间或机构等名词关系。",
+    "quiz": {
+      "question": "「日本語___先生」中应填什么？",
+      "options": [
+        "の",
+        "を",
+        "が",
+        "へ"
+      ],
+      "answer": "の",
+      "explanation": "「日本語の先生」表示日语老师。"
+    },
+    "explanation": {
+      "ja": "二つの名詞をつなぎ、所有、所属、種類、内容などの関係を表します。",
+      "zh": "连接两个名词，表示所属、属性、类别或说明，相当于“……的……”。",
+      "en": "Connects two nouns to express possession, affiliation, category, content, or another descriptive relationship."
+    }
+  },
+  {
+    "id": "kore-sore-are",
+    "level": "N5",
+    "lesson": 3,
+    "kanaOrder": "これそれあれ",
+    "title": "これ・それ・あれ",
+    "pattern": "これ / それ / あれ + は + Noun + です",
+    "examples": [
+      {
+        "japanese": "それは何ですか。",
+        "reading": "それは なんですか。",
+        "chinese": "那个（靠近你）是什么？"
+      }
+    ],
+    "commonMistakes": [
+      "これ・それ・あれ可以单独作名词，不能直接放在另一个名词前。",
+      "修饰名词时要使用「この・その・あの」。"
+    ],
+    "usage": "在商店、教室或日常对话中指示具体物品。",
+    "quiz": {
+      "question": "要说“这本书”，应该使用哪一个？",
+      "options": [
+        "この本",
+        "これ本",
+        "ここ本",
+        "こんな本ですか"
+      ],
+      "answer": "この本",
+      "explanation": "直接修饰名词时使用「この・その・あの」。"
+    },
+    "explanation": {
+      "ja": "「これ」は話し手の近く、「それ」は聞き手の近く、「あれ」は両方から遠い物を指します。",
+      "zh": "指示事物：これ指靠近说话者的东西、それ指靠近听话者的东西、あれ指离双方都远的东西。",
+      "en": "Demonstratives for things: これ is near the speaker, それ near the listener, and あれ far from both."
+    }
+  },
+  {
+    "id": "arimasu-imasu",
+    "level": "N5",
+    "lesson": 4,
+    "kanaOrder": "ありますいます",
+    "title": "あります・います",
+    "pattern": "Place に + Noun が + あります / います",
+    "examples": [
+      {
+        "japanese": "机の上に本があります。",
+        "reading": "つくえの うえに ほんが あります。",
+        "chinese": "桌子上有一本书。"
+      },
+      {
+        "japanese": "教室に先生がいます。",
+        "reading": "きょうしつに せんせいが います。",
+        "chinese": "教室里有老师。"
+      }
+    ],
+    "commonMistakes": [
+      "人和动物通常不用「あります」。",
+      "存在地点使用助词「に」，不是动作场所的「で」。"
+    ],
+    "usage": "说明某地有什么、某人在哪里，以及描述房间或地图。",
+    "quiz": {
+      "question": "「公園に犬が___。」请选择正确答案。",
+      "options": [
+        "います",
+        "あります",
+        "します",
+        "です"
+      ],
+      "answer": "います",
+      "explanation": "狗是有生命对象，存在动词使用「います」。"
+    },
+    "explanation": {
+      "ja": "存在を表します。物や植物には「あります」、人や動物には「います」を使います。",
+      "zh": "表示存在。无生命物体使用「あります」，人和动物等有生命对象使用「います」。",
+      "en": "Expresses existence. Use あります for inanimate things and います for people and animals."
+    }
+  },
+  {
+    "id": "masu",
+    "level": "N5",
+    "lesson": 5,
+    "kanaOrder": "ます",
+    "title": "ます",
+    "pattern": "Verb ます-stem + ます",
+    "examples": [
+      {
+        "japanese": "毎日、日本語を勉強します。",
+        "reading": "まいにち、にほんごを べんきょうします。",
+        "chinese": "我每天学习日语。"
+      }
+    ],
+    "commonMistakes": [
+      "「ます」本身不只表示现在，也可根据时间词表示将来。",
+      "不要在辞书形后直接加「ます」，要先变成ます形词干。"
+    ],
+    "usage": "课堂、工作、与陌生人交谈等礼貌交流。",
+    "quiz": {
+      "question": "「食べる」的礼貌肯定形式是什么？",
+      "options": [
+        "食べます",
+        "食べるます",
+        "食べです",
+        "食べません"
+      ],
+      "answer": "食べます",
+      "explanation": "一段动词去掉「る」后加「ます」。"
+    },
+    "explanation": {
+      "ja": "動詞の丁寧な非過去肯定形です。現在の習慣や未来の行動を表すことができます。",
+      "zh": "动词的礼貌非过去肯定形式，可表示现在的习惯或将来的动作。",
+      "en": "The polite non-past affirmative verb form, used for present habits and future actions."
+    }
+  },
+  {
+    "id": "masen",
+    "level": "N5",
+    "lesson": 5,
+    "kanaOrder": "ません",
+    "title": "ません",
+    "pattern": "Verb ます-stem + ません",
+    "examples": [
+      {
+        "japanese": "今日はコーヒーを飲みません。",
+        "reading": "きょうは コーヒーを のみません。",
+        "chinese": "今天不喝咖啡。"
+      }
+    ],
+    "commonMistakes": [
+      "「ません」用于动词，名词和な形容词的否定应使用「ではありません」。",
+      "注意时间词决定它表达现在习惯还是将来。"
+    ],
+    "usage": "礼貌表达不做某事、拒绝或说明习惯。",
+    "quiz": {
+      "question": "「行きます」的否定形式是什么？",
+      "options": [
+        "行きません",
+        "行くません",
+        "行きではありません",
+        "行かます"
+      ],
+      "answer": "行きません",
+      "explanation": "将「ます」替换成「ません」。"
+    },
+    "explanation": {
+      "ja": "動詞の丁寧な非過去否定形で、現在または未来にその行動をしないことを表します。",
+      "zh": "动词的礼貌非过去否定形式，表示现在不做、平时不做或将来不做。",
+      "en": "The polite non-past negative verb form, indicating that an action is not or will not be performed."
+    }
+  },
+  {
+    "id": "te-kudasai",
+    "level": "N5",
+    "lesson": 7,
+    "kanaOrder": "てください",
+    "title": "～てください",
+    "pattern": "Verb て-form + ください",
+    "examples": [
+      {
+        "japanese": "ここに名前を書いてください。",
+        "reading": "ここに なまえを かいてください。",
+        "chinese": "请在这里写名字。"
+      }
+    ],
+    "commonMistakes": [
+      "必须使用动词て形，不能直接接辞书形。",
+      "对上级提出较重请求时，需要更委婉的表达。"
+    ],
+    "usage": "课堂指示、服务场景、日常礼貌请求。",
+    "quiz": {
+      "question": "「読む」接「ください」时应如何变化？",
+      "options": [
+        "読んでください",
+        "読みてください",
+        "読むください",
+        "読ってください"
+      ],
+      "answer": "読んでください",
+      "explanation": "「読む」的て形是「読んで」。"
+    },
+    "explanation": {
+      "ja": "動詞のて形に付けて、相手に何かをするよう丁寧に依頼します。",
+      "zh": "礼貌地请求对方做某事，意为“请……”。",
+      "en": "Follows the te-form of a verb to make a polite request for someone to do something."
+    }
+  },
+  {
+    "id": "te-mo-ii",
+    "level": "N5",
+    "lesson": 8,
+    "kanaOrder": "てもいい",
+    "title": "～てもいいです",
+    "pattern": "Verb て-form + もいいです",
+    "examples": [
+      {
+        "japanese": "ここで写真を撮ってもいいです。",
+        "reading": "ここで しゃしんを とってもいいです。",
+        "chinese": "可以在这里拍照。"
+      }
+    ],
+    "commonMistakes": [
+      "请求许可时句末通常加「か」。",
+      "不要与禁止表达「てはいけません」混淆。"
+    ],
+    "usage": "询问规则、请求许可、告诉别人某行为被允许。",
+    "quiz": {
+      "question": "“可以坐这里吗？”正确表达是哪一个？",
+      "options": [
+        "ここに座ってもいいですか",
+        "ここに座ってくださいか",
+        "ここに座りませんか",
+        "ここに座るですか"
+      ],
+      "answer": "ここに座ってもいいですか",
+      "explanation": "请求许可使用「て形 + もいいですか」。"
+    },
+    "explanation": {
+      "ja": "動詞のて形に付けて許可を表します。疑問形にすると許可を求める表現になります。",
+      "zh": "表示许可，意思是“可以……”。疑问形式用于请求许可。",
+      "en": "Follows the te-form to grant permission; in question form, it asks for permission."
+    }
+  },
+  {
+    "id": "te-wa-ikemasen",
+    "level": "N5",
+    "lesson": 8,
+    "kanaOrder": "てはいけません",
+    "title": "～てはいけません",
+    "pattern": "Verb て-form + はいけません",
+    "examples": [
+      {
+        "japanese": "ここでたばこを吸ってはいけません。",
+        "reading": "ここで たばこを すってはいけません。",
+        "chinese": "这里禁止吸烟。"
+      }
+    ],
+    "commonMistakes": [
+      "这是规则性较强的禁止表达，不适合所有轻微建议。",
+      "口语中会出现「ちゃいけない」，初学阶段先掌握完整形式。"
+    ],
+    "usage": "公共规则、校规、注意事项和明确禁止。",
+    "quiz": {
+      "question": "“不能进入”应选择哪一个？",
+      "options": [
+        "入ってはいけません",
+        "入ってもいいです",
+        "入ってください",
+        "入りたいです"
+      ],
+      "answer": "入ってはいけません",
+      "explanation": "禁止使用「て形 + はいけません」。"
+    },
+    "explanation": {
+      "ja": "動詞のて形に付けて、規則などによる禁止を表します。",
+      "zh": "表示禁止，意思是“不可以……”或“不能……”。",
+      "en": "Follows the te-form to express prohibition or that an action is not allowed."
+    }
+  },
+  {
+    "id": "tai-desu",
+    "level": "N5",
+    "lesson": 9,
+    "kanaOrder": "たいです",
+    "title": "～たいです",
+    "pattern": "Verb ます-stem + たいです",
+    "examples": [
+      {
+        "japanese": "日本へ行きたいです。",
+        "reading": "にほんへ いきたいです。",
+        "chinese": "我想去日本。"
+      }
+    ],
+    "commonMistakes": [
+      "通常用于表达自己的愿望，直接询问上级愿望可能不够礼貌。",
+      "不是在辞书形后直接加「たい」。"
+    ],
+    "usage": "表达个人愿望、旅行计划和想进行的活动。",
+    "quiz": {
+      "question": "「食べます」变成“想吃”是什么？",
+      "options": [
+        "食べたいです",
+        "食べるたいです",
+        "食べますたい",
+        "食べてほしいです"
+      ],
+      "answer": "食べたいです",
+      "explanation": "去掉「ます」后加「たいです」。"
+    },
+    "explanation": {
+      "ja": "動詞のます形の語幹に付けて、話し手がしたいことや希望を表します。",
+      "zh": "表示说话者想做某事，意为“想……”。",
+      "en": "Follows the masu-stem to express the speaker's desire to perform an action."
+    }
+  },
+  {
+    "id": "yori-houga",
+    "level": "N5",
+    "lesson": 10,
+    "kanaOrder": "よりほうが",
+    "title": "～より～のほうが",
+    "pattern": "Noun A より + Noun B のほうが + adjective",
+    "examples": [
+      {
+        "japanese": "電車よりバスのほうが安いです。",
+        "reading": "でんしゃより バスのほうが やすいです。",
+        "chinese": "比起电车，公交车更便宜。"
+      }
+    ],
+    "commonMistakes": [
+      "「より」标记比较基准，「のほうが」标记更符合形容词的一方。",
+      "不要把两者的位置颠倒后仍沿用原中文意思。"
+    ],
+    "usage": "购物、交通、喜好和事物性质的两项比较。",
+    "quiz": {
+      "question": "“猫比狗安静”可表达为哪一个？",
+      "options": [
+        "犬より猫のほうが静かです",
+        "猫より犬のほうが静かです",
+        "犬のほうが猫より元気です",
+        "猫と犬が静かです"
+      ],
+      "answer": "犬より猫のほうが静かです",
+      "explanation": "比较基准“狗”后接「より」，更安静的“猫”后接「のほうが」。"
+    },
+    "explanation": {
+      "ja": "二つの物を比べ、「AよりBのほうが～」の形でBの性質がより強いことを表します。",
+      "zh": "比较两者，表示“比起 A，B 更……”。",
+      "en": "Compares two things and states that B has a quality to a greater degree than A."
+    }
+  },
+  {
+    "id": "kara-made",
+    "level": "N5",
+    "lesson": 11,
+    "kanaOrder": "からまで",
+    "title": "～から～まで",
+    "pattern": "Time / Place + から + Time / Place + まで",
+    "examples": [
+      {
+        "japanese": "学校は九時から三時までです。",
+        "reading": "がっこうは くじから さんじまでです。",
+        "chinese": "学校从九点到三点。"
+      }
+    ],
+    "commonMistakes": [
+      "只有起点或终点时，可以单独使用「から」或「まで」。",
+      "不要把表示原因的「から」与起点用法混淆。"
+    ],
+    "usage": "营业时间、课程时间、旅行路线和距离范围。",
+    "quiz": {
+      "question": "“从东京到京都”应如何表达？",
+      "options": [
+        "東京から京都まで",
+        "東京まで京都から",
+        "東京に京都を",
+        "東京で京都へ"
+      ],
+      "answer": "東京から京都まで",
+      "explanation": "起点用「から」，终点用「まで」。"
+    },
+    "explanation": {
+      "ja": "時間や場所の始点を「から」、終点を「まで」で示し、「～から～まで」の範囲を表します。",
+      "zh": "表示时间或地点的起点和终点，相当于“从……到……”。",
+      "en": "Marks a starting point with から and an ending point with まで for time or place ranges."
+    }
+  },
+  {
+    "id": "nakereba-narimasen",
+    "level": "N5",
+    "lesson": 12,
+    "kanaOrder": "なければなりません",
+    "title": "～なければなりません",
+    "pattern": "Verb ない-form (remove い) + ければなりません",
+    "examples": [
+      {
+        "japanese": "毎日、薬を飲まなければなりません。",
+        "reading": "まいにち、くすりを のまなければなりません。",
+        "chinese": "每天必须吃药。"
+      }
+    ],
+    "commonMistakes": [
+      "需要先正确变成ない形，再把词尾「い」变为「ければ」。",
+      "口语有缩略形式，但正式学习先掌握完整表达。"
+    ],
+    "usage": "规则、任务、健康要求和必须完成的事项。",
+    "quiz": {
+      "question": "「行く」变成“必须去”是什么？",
+      "options": [
+        "行かなければなりません",
+        "行くなければなりません",
+        "行きなければなりません",
+        "行ってはなりません"
+      ],
+      "answer": "行かなければなりません",
+      "explanation": "「行く」的ない形是「行かない」，再变为「行かなければなりません」。"
+    },
+    "explanation": {
+      "ja": "動詞のない形から作り、ある行動をする必要や義務があることを表します。",
+      "zh": "表示义务或必要性，意思是“必须……”。",
+      "en": "Built from the nai-form to express necessity or obligation: someone must do an action."
+    }
+  }
+]

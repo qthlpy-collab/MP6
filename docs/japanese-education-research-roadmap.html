@@ -1,0 +1,161 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Japanese Language Education Research and Development Roadmap</title>
+  <style>
+    :root{
+      --ink:#17324d;--muted:#708399;--line:#c9d7e2;
+      --blue:#5367d8;--blue-soft:#f0f2ff;--blue-line:#9aa7ee;
+      --amber:#ef7d3c;--amber-soft:#fff3eb;--amber-line:#f3b087;
+      --green:#14a58b;--green-soft:#ebfaf7;--green-line:#79d0bf;
+    }
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}
+    body{background:#fff;color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif}
+    #viewport{width:100%;height:100%;cursor:grab;user-select:none;background:
+      radial-gradient(circle at 50% 5%,rgba(220,235,244,.38),transparent 24%),#fff}
+    #viewport.dragging{cursor:grabbing}svg{width:100%;height:100%}
+    .toolbar{position:fixed;right:18px;top:14px;z-index:5;display:flex;gap:7px;padding:7px;border:1px solid #dce6ed;border-radius:12px;background:#fffffff2;box-shadow:0 8px 28px rgba(23,50,77,.08)}
+    button{border:1px solid #d6e2ea;border-radius:8px;padding:7px 11px;background:#fff;color:#315f78;font-weight:700;cursor:pointer}
+    button:hover{background:#f5f9fb}
+    .edge{fill:none;stroke-linecap:round;stroke-linejoin:round}.timeline{stroke:#b8c9d5;stroke-width:7;opacity:.42}
+    .stage-edge{stroke-width:4;opacity:.72}.category-edge{stroke-width:2.2;opacity:.48}
+    .node rect{stroke-width:2;filter:drop-shadow(0 5px 10px rgba(23,50,77,.09))}
+    .node text{text-anchor:middle;dominant-baseline:middle;font-weight:700;pointer-events:none}
+    .title rect{fill:url(#titleGradient);stroke:#315f78;stroke-width:3}.title text{fill:#fff;font-size:23px}
+    .stage text{fill:#fff;font-size:19px}.category text{font-size:14px}.task rect{fill:#fff}.task text{fill:#3d5367;font-size:12.5px}
+    .level-label text{fill:#8091a1;font-size:12px;font-weight:700;letter-spacing:1px}
+    .legend text{fill:#65798b;font-size:12px}.hint{position:fixed;left:18px;bottom:14px;color:#94a3b8;font-size:12px}
+    @media print{.toolbar,.hint{display:none}body{overflow:visible}#viewport{width:2400px;height:1450px}}
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <button onclick="zoomBy(1.15)">Zoom In</button>
+  <button onclick="zoomBy(.87)">Zoom Out</button>
+  <button onclick="resetView()">Reset</button>
+  <button onclick="window.print()">Export PDF</button>
+</div>
+<div id="viewport">
+<svg viewBox="0 0 2400 1450" aria-label="Three-level research and development roadmap mind map">
+<defs>
+  <linearGradient id="titleGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5367d8"/><stop offset=".5" stop-color="#8b5fd3"/><stop offset="1" stop-color="#14a58b"/></linearGradient>
+</defs>
+<g id="canvas">
+  <!-- Header -->
+  <g class="node title">
+    <rect x="650" y="45" width="1100" height="125" rx="30"/>
+    <text x="1200" y="92">Japanese Language Education</text>
+    <text x="1200" y="132">Research and Development Roadmap</text>
+  </g>
+  <g class="node level-label"><text x="1200" y="205">TIME STAGE 鈫?WORK CATEGORY 鈫?SPECIFIC ACTIVITIES</text></g>
+
+  <!-- Timeline -->
+  <path class="edge timeline" d="M300 285H2100"/>
+  <circle cx="450" cy="285" r="10" fill="#5367d8"/>
+  <circle cx="1200" cy="285" r="10" fill="#ef7d3c"/>
+  <circle cx="1950" cy="285" r="10" fill="#14a58b"/>
+
+  <!-- Level 1 -->
+  <g class="node stage"><rect x="300" y="240" width="300" height="90" rx="24" fill="#5367d8" stroke="#4053bd"/><text x="450" y="285">Completed</text></g>
+  <g class="node stage"><rect x="1050" y="240" width="300" height="90" rx="24" fill="#ef7d3c" stroke="#d66427"/><text x="1200" y="285">In Progress</text></g>
+  <g class="node stage"><rect x="1800" y="240" width="300" height="90" rx="24" fill="#14a58b" stroke="#0d8873"/><text x="1950" y="285">Future Plan</text></g>
+
+  <!-- COMPLETED: Level 1 to Level 2 -->
+  <path class="edge stage-edge" stroke="#5367d8" d="M450 330C450 390 160 390 160 445"/>
+  <path class="edge stage-edge" stroke="#5367d8" d="M450 330C450 390 450 390 450 445"/>
+  <path class="edge stage-edge" stroke="#5367d8" d="M450 330C450 390 740 390 740 445"/>
+  <path class="edge stage-edge" stroke="#5367d8" d="M450 330C450 730 300 730 300 785"/>
+  <path class="edge stage-edge" stroke="#5367d8" d="M450 330C450 730 600 730 600 785"/>
+
+  <!-- Completed Level 2 -->
+  <g class="node category"><rect x="30" y="445" width="260" height="64" rx="17" fill="var(--blue-soft)" stroke="var(--blue-line)"/><text x="160" y="477" fill="#5367d8">Literature Review</text></g>
+  <g class="node category"><rect x="320" y="445" width="260" height="64" rx="17" fill="var(--blue-soft)" stroke="var(--blue-line)"/><text x="450" y="477" fill="#5367d8">Investigation</text></g>
+  <g class="node category"><rect x="610" y="445" width="260" height="64" rx="17" fill="var(--blue-soft)" stroke="var(--blue-line)"/><text x="740" y="477" fill="#5367d8">Initial Innovation</text></g>
+  <g class="node category"><rect x="170" y="785" width="260" height="64" rx="17" fill="var(--blue-soft)" stroke="var(--blue-line)"/><text x="300" y="817" fill="#5367d8">Framework Design</text></g>
+  <g class="node category"><rect x="470" y="785" width="260" height="64" rx="17" fill="var(--blue-soft)" stroke="var(--blue-line)"/><text x="600" y="817" fill="#5367d8">Initial Validation</text></g>
+
+  <!-- Completed Level 3 links -->
+  <path class="edge category-edge" stroke="#5367d8" d="M160 509V555"/><path class="edge category-edge" stroke="#5367d8" d="M160 509V625"/><path class="edge category-edge" stroke="#5367d8" d="M160 509V695"/><path class="edge category-edge" stroke="#5367d8" d="M160 509V765"/>
+  <path class="edge category-edge" stroke="#5367d8" d="M450 509V565"/><path class="edge category-edge" stroke="#5367d8" d="M450 509V645"/><path class="edge category-edge" stroke="#5367d8" d="M450 509V725"/>
+  <path class="edge category-edge" stroke="#5367d8" d="M740 509V565"/><path class="edge category-edge" stroke="#5367d8" d="M740 509V645"/><path class="edge category-edge" stroke="#5367d8" d="M740 509V725"/>
+  <path class="edge category-edge" stroke="#5367d8" d="M300 849V900"/><path class="edge category-edge" stroke="#5367d8" d="M300 849V980"/>
+  <path class="edge category-edge" stroke="#5367d8" d="M600 849V900"/><path class="edge category-edge" stroke="#5367d8" d="M600 849V980"/><path class="edge category-edge" stroke="#5367d8" d="M600 849V1060"/>
+
+  <!-- Completed tasks -->
+  <g class="node task"><rect x="30" y="555" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="160" y="579">Second Language Acquisition</text></g>
+  <g class="node task"><rect x="30" y="625" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="160" y="649">Educational Psychology</text></g>
+  <g class="node task"><rect x="30" y="695" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="160" y="719">Cognitive Science</text></g>
+  <g class="node task"><rect x="30" y="765" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="160" y="789">Scientific Learning Methods</text></g>
+  <g class="node task"><rect x="320" y="565" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="450" y="589">Teacher Interviews</text></g>
+  <g class="node task"><rect x="320" y="645" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="450" y="669">Beginner Learner Interviews</text></g>
+  <g class="node task"><rect x="320" y="725" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="450" y="749">Learning Difficulty Research</text></g>
+  <g class="node task"><rect x="610" y="565" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="740" y="589">Coding-Based Memory</text></g>
+  <g class="node task"><rect x="610" y="645" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="740" y="669">Movie Storyboard Memory</text></g>
+  <g class="node task"><rect x="610" y="725" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="740" y="749">Kana Pronunciation Design</text></g>
+  <g class="node task"><rect x="170" y="900" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="300" y="924">Vocabulary Framework</text></g>
+  <g class="node task"><rect x="170" y="980" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="300" y="1004">Teaching System Framework</text></g>
+  <g class="node task"><rect x="470" y="900" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="600" y="924">Tested with Two Learners</text></g>
+  <g class="node task"><rect x="470" y="980" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="600" y="1004">Pronunciation Improvement</text></g>
+  <g class="node task"><rect x="470" y="1060" width="260" height="48" rx="14" stroke="#aab4f1"/><text x="600" y="1084">Early Effectiveness Verified</text></g>
+
+  <!-- IN PROGRESS Level 2 -->
+  <path class="edge stage-edge" stroke="#ef7d3c" d="M1200 330C1200 405 1000 405 1000 460"/>
+  <path class="edge stage-edge" stroke="#ef7d3c" d="M1200 330C1200 405 1200 405 1200 460"/>
+  <path class="edge stage-edge" stroke="#ef7d3c" d="M1200 330C1200 405 1400 405 1400 460"/>
+  <g class="node category"><rect x="880" y="460" width="240" height="64" rx="17" fill="var(--amber-soft)" stroke="var(--amber-line)"/><text x="1000" y="492" fill="#9b621d">Content Production</text></g>
+  <g class="node category"><rect x="1080" y="460" width="240" height="64" rx="17" fill="var(--amber-soft)" stroke="var(--amber-line)"/><text x="1200" y="492" fill="#9b621d">Learning Media</text></g>
+  <g class="node category"><rect x="1280" y="460" width="240" height="64" rx="17" fill="var(--amber-soft)" stroke="var(--amber-line)"/><text x="1400" y="492" fill="#9b621d">System Refinement</text></g>
+  <path class="edge category-edge" stroke="#ef7d3c" d="M1000 524V580"/><path class="edge category-edge" stroke="#ef7d3c" d="M1000 524V660"/>
+  <path class="edge category-edge" stroke="#ef7d3c" d="M1200 524V580"/><path class="edge category-edge" stroke="#ef7d3c" d="M1200 524V660"/>
+  <path class="edge category-edge" stroke="#ef7d3c" d="M1400 524V580"/><path class="edge category-edge" stroke="#ef7d3c" d="M1400 524V660"/><path class="edge category-edge" stroke="#ef7d3c" d="M1400 524V740"/>
+  <g class="node task"><rect x="880" y="580" width="240" height="48" rx="14" stroke="#f2b58f"/><text x="1000" y="604">Complete N5 Coding</text></g>
+  <g class="node task"><rect x="880" y="660" width="240" height="48" rx="14" stroke="#f2b58f"/><text x="1000" y="684">Create Learning Scripts</text></g>
+  <g class="node task"><rect x="1080" y="580" width="240" height="48" rx="14" stroke="#f2b58f"/><text x="1200" y="604">Generate Educational Images</text></g>
+  <g class="node task"><rect x="1080" y="660" width="240" height="48" rx="14" stroke="#f2b58f"/><text x="1200" y="684">Create Memory Videos</text></g>
+  <g class="node task"><rect x="1280" y="580" width="240" height="48" rx="14" stroke="#f2b58f"/><text x="1400" y="604">Improve Review System</text></g>
+  <g class="node task"><rect x="1280" y="660" width="240" height="48" rx="14" stroke="#f2b58f"/><text x="1400" y="684">Improve Practice Accuracy</text></g>
+  <g class="node task"><rect x="1280" y="740" width="240" height="48" rx="14" stroke="#f2b58f"/><text x="1400" y="764">Expand Vocabulary System</text></g>
+
+  <!-- FUTURE PLAN Level 2 -->
+  <path class="edge stage-edge" stroke="#14a58b" d="M1950 330C1950 405 1720 405 1720 460"/>
+  <path class="edge stage-edge" stroke="#14a58b" d="M1950 330C1950 405 1950 405 1950 460"/>
+  <path class="edge stage-edge" stroke="#14a58b" d="M1950 330C1950 405 2180 405 2180 460"/>
+  <g class="node category"><rect x="1600" y="460" width="240" height="64" rx="17" fill="var(--green-soft)" stroke="var(--green-line)"/><text x="1720" y="492" fill="#2f6e59">Pilot Research</text></g>
+  <g class="node category"><rect x="1830" y="460" width="240" height="64" rx="17" fill="var(--green-soft)" stroke="var(--green-line)"/><text x="1950" y="492" fill="#2f6e59">Teaching Validation</text></g>
+  <g class="node category"><rect x="2060" y="460" width="240" height="64" rx="17" fill="var(--green-soft)" stroke="var(--green-line)"/><text x="2180" y="492" fill="#2f6e59">Data & Scale</text></g>
+  <path class="edge category-edge" stroke="#14a58b" d="M1720 524V580"/><path class="edge category-edge" stroke="#14a58b" d="M1720 524V660"/><path class="edge category-edge" stroke="#14a58b" d="M1720 524V740"/>
+  <path class="edge category-edge" stroke="#14a58b" d="M1950 524V580"/><path class="edge category-edge" stroke="#14a58b" d="M1950 524V660"/><path class="edge category-edge" stroke="#14a58b" d="M1950 524V740"/>
+  <path class="edge category-edge" stroke="#14a58b" d="M2180 524V580"/><path class="edge category-edge" stroke="#14a58b" d="M2180 524V660"/><path class="edge category-edge" stroke="#14a58b" d="M2180 524V740"/><path class="edge category-edge" stroke="#14a58b" d="M2180 524V820"/>
+  <g class="node task"><rect x="1600" y="580" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="1720" y="604">Small-Scale Pilot Study</text></g>
+  <g class="node task"><rect x="1600" y="660" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="1720" y="684">More Student Testing</text></g>
+  <g class="node task"><rect x="1600" y="740" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="1720" y="764">Second Teacher Interviews</text></g>
+  <g class="node task"><rect x="1830" y="580" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="1950" y="604">Teacher Trial</text></g>
+  <g class="node task"><rect x="1830" y="660" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="1950" y="684">Feedback Collection</text></g>
+  <g class="node task"><rect x="1830" y="740" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="1950" y="764">Assignment Support</text></g>
+  <g class="node task"><rect x="2060" y="580" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="2180" y="604">Learning Analytics</text></g>
+  <g class="node task"><rect x="2060" y="660" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="2180" y="684">Student Management</text></g>
+  <g class="node task"><rect x="2060" y="740" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="2180" y="764">Data Collection & Analysis</text></g>
+  <g class="node task"><rect x="2060" y="820" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="2180" y="844">Large-Scale Testing</text></g>
+  <g class="node task"><rect x="2060" y="900" width="240" height="48" rx="14" stroke="#80d2c2"/><text x="2180" y="924">Continuous Improvement</text></g>
+
+  <!-- hierarchy legend -->
+  <g class="node legend"><text x="1200" y="1360">LEVEL 1: TIME STAGE銆€銆€LEVEL 2: WORK CATEGORY銆€銆€LEVEL 3: SPECIFIC ACTIVITIES</text></g>
+</g>
+</svg>
+</div>
+<div class="hint">Three-level academic roadmap 路 Drag to move 路 Scroll to zoom</div>
+<script>
+const v=document.getElementById("viewport"),c=document.getElementById("canvas");let s=.64,x=0,y=8,d=false,lx=0,ly=0;
+function draw(){c.setAttribute("transform",`translate(${x} ${y}) scale(${s})`)}
+function zoomBy(f,cx=innerWidth/2,cy=innerHeight/2){const n=Math.min(1.8,Math.max(.36,s*f));x=cx-(cx-x)*(n/s);y=cy-(cy-y)*(n/s);s=n;draw()}
+function resetView(){s=.64;x=Math.max(10,(innerWidth-2400*s)/2);y=8;draw()}
+v.addEventListener("wheel",e=>{e.preventDefault();zoomBy(e.deltaY<0?1.1:.9,e.clientX,e.clientY)},{passive:false});
+v.addEventListener("pointerdown",e=>{d=true;lx=e.clientX;ly=e.clientY;v.classList.add("dragging");v.setPointerCapture(e.pointerId)});
+v.addEventListener("pointermove",e=>{if(!d)return;x+=e.clientX-lx;y+=e.clientY-ly;lx=e.clientX;ly=e.clientY;draw()});
+v.addEventListener("pointerup",()=>{d=false;v.classList.remove("dragging")});resetView();
+</script>
+</body>
+</html>
+
